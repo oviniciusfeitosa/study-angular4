@@ -22,18 +22,24 @@ const HEROES: Hero[] = [
   selector: 'app-root',
   // templateUrl: './app.component.html',
   template: `<h1>{{title}}</h1>
-             <h2>{{hero.name}} details!</h2>
-             <div><label>id: </label>{{hero.id}}</div>
-             <div>
+            <h2>My Heroes</h2>
+            <ul class="heroes">
+              <li *ngFor="let hero of heroes">
+                <span class="badge">{{hero.id}}</span> {{hero.name}}
+              </li>
+            </ul>
+            <h2>{{hero.name}} details!</h2>
+            <div><label>id: </label>{{hero.id}}</div>
+            <div>
               <label>name: </label>{{hero.name}}
               <input [(ngModel)]="hero.name" placeholder="name">
-             </div>
+            </div>
              `,
   styleUrls: ['./app.component.css']
 })
 
 export class AppComponent {
   title = 'Tour of Heroes';
-  hero = HEROES;
+  heroes = HEROES;
   
 }
