@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Hero } from './hero';
 
 // @Component Decorator
@@ -18,5 +18,5 @@ import { Hero } from './hero';
 
 // export is used becouse every time it will be imported.
 export class HeroDetailComponent {
-    hero: Hero;
+    @Input() hero: Hero;
 }
