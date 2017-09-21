@@ -17,5 +17,5 @@ import { Component } from '@angular/core';
 
 // export is used becouse every time it will be imported.
 export class HeroDetailComponent {
-
+    hero: Hero;
 }
