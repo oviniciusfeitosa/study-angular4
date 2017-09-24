@@ -8,6 +8,6 @@ import { Hero } from './hero';
 
 export class HeroService {
     getHeroes(): Hero[] {
-        return Heroes
+        return HEROES;
     }
 }
