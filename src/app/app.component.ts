@@ -4,6 +4,8 @@ import {HeroService} from './hero.service'
 
 @Component({
     selector: 'app-root',
+    // Teaching Injector do make instance of HeroService
+    providers: [HeroService],
     // templateUrl: './app.component.html',
     template: `<h1>{{title}}</h1>
                 <h2>My Heroes</h2>
