@@ -4,7 +4,7 @@ import {HeroService} from './hero.service'
 import {OnInit} from '@angular/core';
 
 @Component({
-    selector: 'app-root',
+    selector: 'my-heroes',
     // Teaching Injector do make instance of HeroService
     providers: [HeroService],
     // templateUrl: './app.component.html',
