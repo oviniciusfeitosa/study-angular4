@@ -15,6 +15,11 @@ import { HeroService } from './hero.service';
         FormsModule,
         RouterModule.forRoot([
             {
+                path: '',
+                redirectTo: '/dashboard',
+                pathMatch: 'full'
+            },
+            {
                 path: 'heroes',
                 // When call 'heroes' at base url '/' defined on index.html, the HeroesComponent will be called.
                 component: HeroesComponent
