@@ -5,10 +5,9 @@ import {OnInit} from '@angular/core';
 
 @Component({
     selector: 'my-heroes',
-    // Teaching Injector do make instance of HeroService
-    providers: [HeroService],
+    providers: [],
     // templateUrl: './app.component.html',
-    template: `<h1>{{title}}</h1>
+    template: `
                 <h2>My Heroes</h2>
                 <ul class="heroes">
                   <li *ngFor="let hero of heroes" (click)="onSelect(hero)" [class.selected]="hero === selectedHero">
@@ -83,7 +82,7 @@ export class HeroesComponent implements OnInit {
        this.heroService.getHeroes().then(heroes => this.heroes = heroes);
     }
 
-    title = 'Tour of Heroes';
+    
 
 
 
