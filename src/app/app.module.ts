@@ -8,22 +8,21 @@ import { HeroDetailComponent } from './hero-detail.component';
 import { HeroesComponent } from './heroes.component';
 import { HeroService } from './hero.service';
 
-RouterModule.forRoot([
-    {
-        path: 'heroes',
-        // When call 'heroes' at base url '/' defined on index.html, the HeroesComponent will be called.
-        component: HeroesComponent
-    }
-])
-
 @NgModule({
-    declarations: [
-        AppComponent,
-        HeroDetailComponent
-    ],
     imports: [
         BrowserModule,
         FormsModule,
+        RouterModule.forRoot([
+            {
+                path: 'heroes',
+                // When call 'heroes' at base url '/' defined on index.html, the HeroesComponent will be called.
+                component: HeroesComponent
+            }
+        ])
+    ],
+    declarations: [
+        AppComponent,
+        HeroDetailComponent,
         // Declarations of HeroesComponent to make Angular recognize `<my-heroes>` tags.
         HeroesComponent
     ],
@@ -35,8 +34,5 @@ RouterModule.forRoot([
     bootstrap: [AppComponent]
 })
 
-
-
 export class AppModule {
-
 }
