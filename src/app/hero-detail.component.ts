@@ -37,6 +37,11 @@ export class HeroDetailComponent implements OnInit {
 
     ngOnInit(): void {
         this.route.paramMap
+        // switchMap is used to scenario with a request was made before and this Component was called by route again,
+        // so it will cancel last request and make a new one.
+
+        // `+params.get('id')` => Means the `id` parameter will come as a string so "+" Javascript Operator (plus) will
+        // convert it to a number.
             .switchMap((params: ParamMap) => this.heroService.getHero(+params.get('id')))
             .subscribe(hero => this.hero = hero);
     }
