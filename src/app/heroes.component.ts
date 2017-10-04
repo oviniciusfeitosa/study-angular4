@@ -82,10 +82,6 @@ export class HeroesComponent implements OnInit {
     this.heroService.getHeroes().then(heroes => this.heroes = heroes);
   }
 
-
-
-
-
   onSelect(hero: Hero): void {
     this.selectedHero = hero;
   }
