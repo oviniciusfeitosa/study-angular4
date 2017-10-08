@@ -10,9 +10,7 @@ import 'rxjs/add/operator/switchMap';
 // @Component Decorator
 @Component({
     selector: 'hero-detail',
-    template: `
-                
-              `
+    templateUrl: './hero-detail.component.html'
 })
 
 // export is used becouse every time it will be imported.
